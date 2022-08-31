@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'my-app';
+export class AppComponent { 
+  language: string = ''; 
+  listOfLanguages: string[] = ["English", "Hindi", "Spanish"]; 
+
+  addLanguage(){
+    this.listOfLanguages.push(this.language); 
+
+    console.log(this.listOfLanguages); 
+  }
 }
