@@ -1,4 +1,14 @@
-<h1>Welcome to the world of tomorrow </h1>
-<input type="text" [(ngModel)]="language"/>
+<h1>Welcome to the world of tomorrow</h1>
+<input type="text" [(ngModel)]="language" />
 
-<button (click)="addLanguage()"> Add </button>
+<button (click)="addLanguage()">Add</button>
+<h2>List of Languages</h2>
+<ul>
+    <li *ngFor="let lang of listOfLanguages">
+        {{ lang }}
+    </li>
+</ul>
+
+<strong *ngIf="listOfLanguages.length > 3">
+    Congrats!! More than three languages
+</strong>
